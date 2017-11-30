@@ -1,3 +1,8 @@
+"""
+    Deepak T Ahire
+    BTech CSE, WCE Sangli
+"""
+
 import numpy as np
 import math
 
@@ -27,10 +32,8 @@ def load_data():
     dataset = []
     for s in file_pointer.readlines():
         s_list = s.split(',')[0:len(s)]
-        #print(len(s_list))
         tmp = list(map(float, s_list[ : len(s_list) - 1]))
         str = s_list[ len(s_list) - 1 ].strip()
-        #print(str)
         tmp.append(int(class_dictionary[str]))
         dataset.append(tmp)
 
